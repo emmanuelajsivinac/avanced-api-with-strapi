@@ -25,6 +25,35 @@
     "description": {
       "type": "text",
       "required": false
+    },
+    "vendorCode": {
+      "type": "string",
+      "required": true
+    },
+    "salePrice": {
+      "type": "decimal"
+    },
+    "wholesalePrice": {
+      "type": "decimal"
+    },
+    "retailPrice": {
+      "type": "decimal",
+      "required": true
+    },
+    "referenceImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "type": {
+      "type": "string",
+      "maxLength": 50,
+      "required": true
     }
   }
 }

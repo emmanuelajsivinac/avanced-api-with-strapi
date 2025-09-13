@@ -406,9 +406,21 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
         maxLength: 250;
       }>;
     publishedAt: Schema.Attribute.DateTime;
+    referenceImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    retailPrice: Schema.Attribute.Decimal & Schema.Attribute.Required;
+    salePrice: Schema.Attribute.Decimal;
+    type: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 50;
+      }>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    vendorCode: Schema.Attribute.String & Schema.Attribute.Required;
+    wholesalePrice: Schema.Attribute.Decimal;
   };
 }
 
