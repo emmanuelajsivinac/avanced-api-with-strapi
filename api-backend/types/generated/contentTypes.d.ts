@@ -889,6 +889,7 @@ export interface PluginUsersPermissionsUser
       Schema.Attribute.Private;
     email: Schema.Attribute.Email &
       Schema.Attribute.Required &
+      Schema.Attribute.Configurable &
       Schema.Attribute.SetMinMaxLength<{
         minLength: 6;
       }>;
@@ -910,6 +911,7 @@ export interface PluginUsersPermissionsUser
       Schema.Attribute.Private;
     password: Schema.Attribute.Password &
       Schema.Attribute.Private &
+      Schema.Attribute.Configurable &
       Schema.Attribute.SetMinMaxLength<{
         minLength: 6;
       }>;
@@ -926,6 +928,7 @@ export interface PluginUsersPermissionsUser
     username: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.Unique &
+      Schema.Attribute.Configurable &
       Schema.Attribute.SetMinMaxLength<{
         minLength: 3;
       }>;
