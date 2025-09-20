@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "organizations",
+  "info": {
+    "singularName": "organization",
+    "pluralName": "organizations",
+    "displayName": "organization"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "NIT": {
+      "type": "string",
+      "maxLength": 9,
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "maxLength": 100,
+      "required": true
+    },
+    "location": {
+      "type": "json",
+      "required": true
+    },
+    "tradePatentId": {
+      "type": "string",
+      "required": true
+    },
+    "holderTradePatent": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

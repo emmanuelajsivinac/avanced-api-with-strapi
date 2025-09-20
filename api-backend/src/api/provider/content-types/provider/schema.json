@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "providers",
+  "info": {
+    "singularName": "provider",
+    "pluralName": "providers",
+    "displayName": "Provider",
+    "description": "Lista de proveedores con ubicación"
+  },
+  "options": {
+    "draftAndPublish": false,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "maxLength": 100
+    },
+    "email": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "phone": {
+      "type": "string",
+      "maxLength": 20
+    },
+    "address": {
+      "type": "string",
+      "maxLength": 200
+    },
+    "city": {
+      "type": "string",
+      "maxLength": 50
+    },
+    "state": {
+      "type": "string",
+      "maxLength": 50
+    },
+    "country": {
+      "type": "string",
+      "maxLength": 50
+    },
+    "location": {
+      "type": "json",
+      "required": true,
+      "description": "Coordenadas GPS: { lat: 14.634, lng: -90.506 }"
+    }
+  }
+}

@@ -13,29 +13,9 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "username": {
-      "type": "string",
-      "minLength": 3,
-      "unique": true,
-      "configurable": true,
-      "required": true
-    },
-    "email": {
-      "type": "email",
-      "minLength": 6,
-      "configurable": true,
-      "required": true
-    },
     "provider": {
       "type": "string",
       "configurable": false
-    },
-    "password": {
-      "type": "password",
-      "minLength": 6,
-      "configurable": true,
-      "private": true,
-      "searchable": false
     },
     "resetPasswordToken": {
       "type": "string",
@@ -66,6 +46,22 @@
       "inversedBy": "users",
       "configurable": false
     },
+    "username": {
+      "type": "string",
+      "minLength": 3,
+      "required": true,
+      "unique": true
+    },
+    "email": {
+      "type": "email",
+      "required": true,
+      "minLength": 6
+    },
+    "password": {
+      "type": "password",
+      "private": true,
+      "minLength": 6
+    },
     "firstName": {
       "type": "string",
       "maxLength": 25,
@@ -75,6 +71,10 @@
       "type": "string",
       "maxLength": 25,
       "required": true
+    },
+    "twoFASecret": {
+      "type": "string",
+      "private": true
     }
   }
 }
